@@ -1,0 +1,233 @@
+/********** Wavora Studios CSS **********/
+
+:root {
+    --primary: #16d5ff; /* Vibrant neon blue */
+    --secondary: #8e8e93; /* Subtle neutral grey */
+    --light: #f0f0f0; /* Light background highlights */
+    --dark: #1c1c28; /* Deep dark for backgrounds */
+    --hero-gradient: linear-gradient(135deg, #141e30, #202946); /* Cool-toned hero background */
+    --retro-accent: #ff4081; /* Retro pink accent */
+    --text-light: #e4e4eb; /* Light text for dark backgrounds */
+}
+
+/* Global Styles */
+h4, h5, h6, .h4, .h5, .h6 {
+    font-weight: 600 !important;
+}
+
+body {
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+/* Buttons */
+.btn {
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.btn.btn-primary {
+    background-color: var(--primary);
+    color: #ffffff;
+    border: none;
+}
+
+.btn:hover {
+    background-color: var(--retro-accent);
+    color: #ffffff !important;
+}
+
+/* Spinner */
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-out, visibility 0s linear 0.5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--dark);
+    border-bottom: 2px solid var(--primary);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.navbar .navbar-brand h2 {
+    color: var(--primary);
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+.navbar .navbar-nav .nav-link {
+    color: var(--text-light);
+    font-weight: bold;
+    transition: 0.3s;
+    text-transform: capitalize;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+    color: var(--retro-accent);
+}
+
+/* Hero Header */
+.hero-header {
+    background: var(--hero-gradient);
+    color: #ffffff;
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+}
+
+.hero-header h1 {
+    font-size: 3.5rem;
+    color: var(--text-light);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.hero-header .breadcrumb-item a {
+    color: var(--primary);
+}
+
+.hero-header .breadcrumb-item.active {
+    color: var(--secondary);
+}
+
+/* About Section */
+.about-section {
+    padding: 60px 20px;
+    background-color: var(--dark);
+    text-align: center;
+}
+
+.about-section h1 {
+    color: var(--primary);
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    color: var(--text-light);
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+.about-section .features .feature {
+    background: var(--light);
+    color: var(--dark);
+    padding: 15px;
+    border-radius: 8px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.about-section .features .feature:hover {
+    background: var(--primary);
+    color: #ffffff;
+}
+
+/* Services Section */
+.service-item {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.service-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin: 0 auto 15px;
+}
+
+.service-item h5 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.service-item p {
+    font-size: 1rem;
+    color: var(--secondary);
+}
+
+/* Portfolio Modals */
+.portfolio-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio-modal .modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
+}
+
+.portfolio-modal .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--dark);
+    padding: 30px 0;
+    color: var(--secondary);
+}
+
+.footer .footer-brand {
+    color: var(--primary);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.footer .footer-links a {
+    color: var(--secondary);
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.footer .footer-links a:hover {
+    color: var(--primary);
+}
+
+/* Back to Top */
+.back-to-top {
+    background-color: var(--primary);
+    color: #ffffff;
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    border-radius: 50%;
+    display: none;
+}
+
+.back-to-top:hover {
+    background-color: var(--retro-accent);
+}
